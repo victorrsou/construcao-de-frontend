@@ -1,0 +1,116 @@
+/* margens, mdn web docs  */
+/* zerar margens para todos  */
+* {
+    margin: 0;
+    padding: 0;
+    /* os componentes continuam do mesmo tamanho  */
+    box-sizing: border-box;
+}
+/* ordem: TAG => CLASS => ID */
+
+body {
+    background-color: aquamarine;
+    /* display flexível  */
+    display: flex;
+    color: #a59999;
+    /* deixa um em baixo do outro, colunas */
+    flex-direction: column;
+    /* centralizou no centro, tendo como base a coluna! */
+    justify-content: center;
+    /* o body fica presente em toda o campo de visão, todo preenchido ( O ALIGN CONTENT É O EIXO CRUZADO, COLUNAS E LINHAS) */
+    height: 100vh;
+}
+
+/* importante seguir a hierarquia do arquivo em HTML, "após o body, header!"  */
+/* para tamanhos, normalmente utiliza-se a escala de 8! tendo em vista o MOBILE!  */
+header {
+    padding: 16px;
+    /* alinha os componentes em linha! */
+    display: flex;
+    /* aqui, foi adicionado os componentes do header em DIV's para organização visual do site */ 
+    justify-content: space-between;
+    /* centralizou na vertical  */
+    align-items: center;
+    background-color: crimson;
+    color: white;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 50px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+header input[type="search"] {
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 16px;
+}
+
+main {
+    /* ocupa a área por completo! */
+    flex: 1;
+    display: flex;
+    background-color: blueviolet;
+}
+
+/* proporção, 20% de navegação de 80% do restante! por isso o flex do section vale 4!  */
+nav {
+    flex: 1;
+    padding: 8px;
+    border-right: 2px solid #ccc;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-bottom: 16px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: white;
+    color: green;
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3 ease;
+}
+
+nav ul li a:hover {
+    background-color: mediumblue;
+    color: white;
+}
+
+section {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 8px 16px;
+}
+
+article {
+    padding: 16px;
+    border: 2px solid #e5d521;
+}
+
+/* . class para o INDEX */
+.login-container {
+    width: 100%;
+    /* valor máximo, pensando no mobile! colocar a largura do aparelho  */
+    max-width: 400px;
+    /* centralizou o formulário  */
+    margin: 48px auto;
+    /* alinha verticalmente!  */
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
