@@ -1,13 +1,15 @@
 import Login from "./pages/Login";
 import Home from "./pages/Home"
+import Perfil from "./pages/Perfil";
 
 function App() {
-    const index = 1;
+    const index = 2;
     return (
         <>
             {/* {if (index==1) ...} */}
             {(index==1) && <Login/>}
             {(index==2) && <Home/>}
+            {(index==3) && <Perfil/>}
         </>
     );
 }
