@@ -1,10 +1,12 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+    const navigate = useNavigate();
+
     return (
         <>
             <h1>Login</h1>
-            <NavLink to="/home">Entrar</NavLink>
+            <button onClick={() => navigate("/home")}>Entrar</button>
         </>
     );
 }

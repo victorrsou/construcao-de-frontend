@@ -11,8 +11,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route element={<Layout />}>
+                    <Route path="/perfil/:id" element={<Perfil />} />
                     <Route path="/home" element={<Home />} />
-                    <Route path="/perfil" element={<Perfil />} />
                 </Route>
                 <Route path="*" element={<Erro404 />} />
             </Routes>
