@@ -1,0 +1,6 @@
+cd aulas
+npm create vite@latest aula07
+cd aula07
+npm install
+npm install react-hook-form
+npm run dev
