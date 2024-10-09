@@ -16,8 +16,8 @@ function FormLogin() {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <InputEmail register={register} error={errors.senha}/>
-            <InputSenha />
+            <InputEmail register={register} error={errors.email}/>
+            <InputSenha register={register} error={errors.senha}/>
             <Botao texto="Entrar" />
         </form>
     );

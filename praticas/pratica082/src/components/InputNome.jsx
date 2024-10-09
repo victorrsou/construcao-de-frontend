@@ -1,4 +1,4 @@
-function InputNome(props) {
+function InputNome({register, error}) {
     const regras = {
         required: 'Nome é obrigatório',
         minLength: {
@@ -14,8 +14,8 @@ function InputNome(props) {
     return (
         <>
             <label htmlFor="nome">Nome</label>
-            <input type="text" {...props.register("nome", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            <input type="text" {...register("nome", regras)} />
+            {error && <p>{error.message}</p>}
         </>
     );
 }

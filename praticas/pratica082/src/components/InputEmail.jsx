@@ -1,4 +1,4 @@
-function InputEmail(props) {
+function InputEmail({register, error}) {
     const regras = {
         required: 'E-mail é obrigatório',
         pattern: {
@@ -10,8 +10,8 @@ function InputEmail(props) {
     return (
         <>
             <label htmlFor="email">E-mail</label>
-            <input type="email" {...props.register("email", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            <input type="email" {...register("email", regras)} />
+            {error && <p>{error.message}</p>}
         </>
     );
 }

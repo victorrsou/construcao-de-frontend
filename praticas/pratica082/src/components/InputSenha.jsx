@@ -1,17 +1,17 @@
-function InputSenha(props) {
+function InputSenha({ register, error }) {
     const regras = {
-        required: 'Senha é obrigatória',
+        required: "Senha é obrigatória",
         minLength: {
             value: 6,
-            message: 'A senha deve ter pelo menos 6 caracteres'
-        }
-    }
+            message: "A senha deve ter pelo menos 6 caracteres",
+        },
+    };
 
     return (
         <>
             <label htmlFor="senha">Senha</label>
-            <input type="password" {...props.register("senha", regras)} />
-            {props.error && <p>{props.error.message}</p>}
+            <input type="password" {...register("senha", regras)} />
+            {error && <p>{error.message}</p>}
         </>
     );
 }

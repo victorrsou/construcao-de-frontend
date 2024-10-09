@@ -3,6 +3,7 @@ import Botao from "../components/Botao";
 import InputSenha from "../components/InputSenha";
 import InputEmail from "../components/InputEmail";
 import InputNome from "../components/InputNome";
+import { useParams } from "react-router-dom";
 
 function FormPerfil() {
     const {register, handleSubmit, formState: {errors}} = useForm();
