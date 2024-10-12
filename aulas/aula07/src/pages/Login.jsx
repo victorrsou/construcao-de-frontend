@@ -3,8 +3,10 @@ import FormLogin from "./FormLogin";
 function Login() {
     return (
         <>
-            <h1>Login</h1>
-            <FormLogin />
+            <main className="login-container">
+                <h1>Login</h1>
+                <FormLogin />
+            </main>
         </>
     );
 }
