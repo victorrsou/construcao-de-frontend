@@ -1,0 +1,12 @@
+comandos terminal - FRONT
+cd aula10
+npm create vite@latest front
+cd front
+npm install
+npm install react-hook-form
+npm i dotenv
+
+comandos terminal - BACK
+cd back
+npm init -y
+npm i json-server

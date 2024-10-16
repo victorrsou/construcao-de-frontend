@@ -1,0 +1,24 @@
+{
+  "contatos": [
+    {
+      "id": "b11a",
+      "nome": "eu",
+      "telefone": "8888-8888"
+    },
+    {
+      "id": "6f62",
+      "nome": "eu",
+      "telefone": "8888-8888"
+    },
+    {
+      "id": "ab78",
+      "nome": "eu",
+      "telefone": "8888-8888"
+    },
+    {
+      "id": "f81a",
+      "nome": "eu",
+      "telefone": "8888-8888"
+    }
+  ]
+}
