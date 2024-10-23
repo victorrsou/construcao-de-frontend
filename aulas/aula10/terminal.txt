@@ -10,3 +10,7 @@ comandos terminal - BACK
 cd back
 npm init -y
 npm i json-server
+
+npm install react-router-dom
+npm install react-hook-form
+
