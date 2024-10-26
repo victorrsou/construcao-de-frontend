@@ -24,9 +24,9 @@ function Novo() {
         <>
             <Cabecalho />
             <Conteudo>
-                <h2>Novo Contato</h2>
                 {erro && <p>{erro}</p>}
-                <Formulario trataEnviar={onSalvar} />
+                <h2>Novo Contato</h2>
+                <Formulario dados={{}} trataEnviar={onSalvar} />
             </Conteudo>
         </>
     );

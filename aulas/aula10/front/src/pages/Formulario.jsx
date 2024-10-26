@@ -7,14 +7,16 @@ function Formulario(props) {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm({ values: props.dados });
 
     // "se é o Novo, eu mando salvar o um novo objeto, se é editar eu peço para que edite o objeto"
-    return <form onSubmit={handleSubmit(props.trataEnviar)}>
-        <InputNome register={register} error={errors.nome} />
-        <InputTelefone register={register} error={errors.telefone} />
-        <button type="submit">Salvar</button>
-    </form>;
+    return (
+        <form onSubmit={handleSubmit(props.trataEnviar)}>
+            <InputNome register={register} error={errors.nome} />
+            <InputTelefone register={register} error={errors.telefone} />
+            <button type="submit">Salvar</button>
+        </form>
+    );
 }
 
 export default Formulario;
