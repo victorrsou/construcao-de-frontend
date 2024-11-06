@@ -1,8 +1,16 @@
-function Home(props) {
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
+
+
+function Home() {
+
+  const {usuario, logout} = useContext(AuthContext);
+
   return (
     <>
       <h1>Home</h1>
-      <button onClick={(e) => props.onSair(false)}>Sair</button>
+      <p>Olá {usuario.email}!</p>
+      <button onClick={(e) => {logout()}}>Sair</button>
     </>
   );
 }
