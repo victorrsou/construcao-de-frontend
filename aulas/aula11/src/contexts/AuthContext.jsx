@@ -15,9 +15,9 @@ function AuthProvider(props) {
     const login = async (dados) => {
         const resposta = await autenticar(dados);
         if (resposta.sucesso) {
-          setUsuario({ email: dados.email, perfil: "aluno", logado: true });
+            setUsuario({ email: dados.email, perfil: "aluno", logado: true });
         } else {
-          setMsg(resposta.msg);
+            setMsg(resposta.msg);
         }
     };
 
@@ -25,8 +25,13 @@ function AuthProvider(props) {
         setUsuario({ email: "", perfil: "", logado: false });
     };
 
-    const registrar = (dados) => {
-        setUsuario({ email: dados.email, perfil: "aluno", logado: true });
+    const registrar = async (dados) => {
+        const resposta = await cadastrar(dados);
+        if (resposta.sucesso) {
+            setUsuario({ email: dados.email, perfil: "aluno", logado: true });
+        } else {
+            setMsg(resposta.msg);
+        }
     };
 
     const contexto = {
