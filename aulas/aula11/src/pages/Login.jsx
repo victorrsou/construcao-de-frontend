@@ -1,14 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthContext";
 import Formulario from "./Formulario";
 
 function Login() {
-    const { login, msg } = useContext(AuthContext);
+    const [msg, setMsg] = useState("");
+
+    const { login } = useContext(AuthContext);
 
     const onEnviar = async (data) => {
-        login(data);
-    }
+        setMsg("");
+        const erro = await login(data);
+        if (erro) {
+            setMsg(erro);
+        }
+    };
 
     return (
         <>

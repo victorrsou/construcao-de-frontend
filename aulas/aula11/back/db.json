@@ -4,6 +4,16 @@
       "email": "jose@iesb.br",
       "password": "$2a$10$LChYWjb7DipQ01VKmuIwjeVjSfxFEizsJ7Q9xXWBI25iK0r5PQRTK",
       "id": 1
+    },
+    {
+      "email": "teste@teste.br",
+      "password": "$2a$10$dxh4PVhuAtdjDRiP4AyExORKM5TeUPHXxePrZvWWBGSd3wycZTYKa",
+      "id": 2
+    },
+    {
+      "email": "testando@gmail.com",
+      "password": "$2a$10$4HEDH/zYBEzZo9LDZOwQd.tm7iU6i31K6oDrwOx6NuOSCMmffQayq",
+      "id": 3
     }
   ]
 }
