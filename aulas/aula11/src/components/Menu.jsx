@@ -1,10 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
 import { AuthContext } from "../contexts/AuthContext";
 
 function Menu() {
-    const { usuario } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const { usuario, logout } = useContext(AuthContext);
+
+    const onSair = async () => {
+        await logout();
+        navigate("/");
+    };
 
     return (
         <nav>
@@ -13,7 +20,7 @@ function Menu() {
                     <NavLink to="/">Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/perfil">Perfil</NavLink>
+                    <NavLink to={`/perfil/${usuario.id}`}>Perfil</NavLink>
                 </li>
                 {usuario.perfil === "admin" && (
                     <li>
@@ -21,7 +28,7 @@ function Menu() {
                     </li>
                 )}
                 <li>
-                    <NavLink to="/" onClick={() => {}}>Sair</NavLink>
+                    <NavLink onClick={onSair}>Sair</NavLink>
                 </li>
             </ul>
         </nav>
